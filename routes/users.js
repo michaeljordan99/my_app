@@ -13,7 +13,7 @@ module.exports = function(app) {
 		res.render('users/index', { title: 'Users', users: users})
 	});
 
-	app.get('/users/new', notLoggedIn, function(req, res) {
+	app.get('/users/new', function(req, res) {
 		res.render('users/new', {title: "New User"});
 	});
 

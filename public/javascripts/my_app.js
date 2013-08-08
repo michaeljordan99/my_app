@@ -1,7 +1,6 @@
 function UserCtrl($scope) {
     
     $scope.user = {firstName: 'Miguel', lastName: 'Jordan'};
-
 }
 
 function UserRestCtrl($scope, $http) {

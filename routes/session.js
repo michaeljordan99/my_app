@@ -13,11 +13,11 @@ module.exports = function(app) {
 			}
 		});
 
-	app.get('/session/new', notLoggedIn, function(req, res) {
+	app.get('/session/new', function(req, res) {
 		res.render('session/new', {title: "New Session"});
 	});
 
-	app.post('/session', notLoggedIn, function(req, res) {
+	app.post('/session', function(req, res) {
 		//debugger;
 		if (users[req.body.username] &&
 			users[req.body.username].password === req.body.password) {
