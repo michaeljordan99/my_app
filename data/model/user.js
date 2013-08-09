@@ -11,3 +11,5 @@ var User = function(firstName, lastName){
 };
 
 module.exports = User;
+
+/* in master */
