@@ -8,4 +8,12 @@ html(ng-app)
 		script(src='/javascripts/my_app.js')
 	body
 		header!= partial('session/user')
-		section#main!= body
+		[Nav goes here]
+		div#container
+			div.row
+				div.span4.well
+					[Left Content]
+				div.span12.well!= body
+			div#footer
+				div#footerInner
+					[Footer]
