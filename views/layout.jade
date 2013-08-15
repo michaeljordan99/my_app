@@ -7,8 +7,24 @@ html(ng-app)
 		script(src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.js')
 		script(src='/javascripts/my_app.js')
 	body
-		header!= partial('session/user')
-		[Nav goes here]
+		header
+			div#headerInner!= partial('session/user')
+		div#nav
+			div.navbar
+				div.navbar-inner
+					ul.nav
+						li#home
+							a(href='#')
+								i.icon-home
+								|&nbsp;Home
+						li#user
+							a(href='#') 
+								i.icon-user
+								|&nbsp;User
+						li#configuration
+							a(href='#')
+								i.icon-cog
+								|&nbsp;Configuration
 		div#container
 			div.row
 				div.span4.well
