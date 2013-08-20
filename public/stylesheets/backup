@@ -1,0 +1,92 @@
+!!!
+html(ng-app)
+	head
+		title= title
+		link(rel='stylesheet', href='/stylesheets/style.css')
+		link(rel='stylesheet', href='https://web-pos-client.azurewebsites.net/Content/bootstrap.css')
+		script(src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.js')
+		script(src='/javascripts/my_app.js')
+	body
+		header
+			div#headerInner!= partial('session/user')
+		div#nav
+			div.navbar
+				div.navbar-inner
+					ul.nav
+						li#home
+							a(href='#')
+								i.icon-home
+								|&nbsp;Home
+						li#user
+							a(href='#') 
+								i.icon-user
+								|&nbsp;User
+						li#configuration
+							a(href='#')
+								i.icon-cog
+								|&nbsp;Configuration
+		div#container
+			div.row
+				div.span12.well!= body
+			footer
+				div#footerInner
+					[Footer]
+
+					body {
+  /*padding: 50px; */
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  width: 99%;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#main{
+	padding: 50px;
+}
+
+#container {
+   /*min-height:100%;
+   position:relative;*/
+}
+
+#nav {
+	padding:15px;
+}
+
+header {
+    width:100%;
+    height:60px; 
+    background: #D6D6D6;
+    color: #606060;
+    padding: 10px;
+}
+
+#headerInner{
+	float: right;
+	padding: 10px;
+}
+
+footer {
+    position:absolute;
+    bottom:0;
+    width:100%;
+    height:60px; 
+    background: #D6D6D6;
+    color: #606060;
+    margin-top: 10px;
+}
+
+#footerInner{
+	float: left;
+	padding: 10px;
+}
+
+.span4{
+  margin: 0 0 0 10px;
+}
+
+.span4, .span12 {
+	height: 400px;
+}

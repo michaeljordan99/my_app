@@ -19,7 +19,7 @@ module.exports = function(app) {
 
 	app.get('/users/:name', loadUser, function(req, res, next) {
 		debugger;
-		res.render('users/profile', { title: 'Users Profile', user: req.user });
+		res.render('users/profile', {title: 'User profile', user: req.user});
 	});
 
 	app.post('/users', notLoggedIn, function(req, res){

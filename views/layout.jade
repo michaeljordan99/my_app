@@ -6,30 +6,32 @@ html(ng-app)
 		link(rel='stylesheet', href='https://web-pos-client.azurewebsites.net/Content/bootstrap.css')
 		script(src='http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.js')
 		script(src='/javascripts/my_app.js')
+
 	body
-		header
-			div#headerInner!= partial('session/user')
-		div#nav
-			div.navbar
-				div.navbar-inner
-					ul.nav
-						li#home
-							a(href='#')
-								i.icon-home
-								|&nbsp;Home
-						li#user
-							a(href='#') 
-								i.icon-user
-								|&nbsp;User
-						li#configuration
-							a(href='#')
-								i.icon-cog
-								|&nbsp;Configuration
 		div#container
-			div.row
-				div.span4.well
-					[Left Content]
-				div.span12.well!= body
-			footer
-				div#footerInner
-					[Footer]
+			header [Header]
+				div#headerInner
+					span.navButton.separator
+						a(href='/')
+							i.icon-home
+					span.navButton.separator		
+						a(href='#')
+							i.icon-cog
+					span.navButton
+						a(href='/users') 
+							i.icon-user	
+					span.navButton
+						input#search(name="search").input-medium
+						a(href='#')
+							|&nbsp;&nbsp;
+							i.icon-search	
+			div#contentWrapper
+				div#leftContent 
+					"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+					incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud 
+					exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
+					dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+					Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit 
+					anim id est laborum."
+				div#rightContent!= body
+			footer [Footer]
