@@ -1,3 +1,4 @@
+/* AngularJS */
 function UserCtrl($scope) {
     
     $scope.user = {firstName: 'Miguel', lastName: 'Jordan'};
@@ -17,3 +18,18 @@ function UserRestCtrl($scope, $http) {
 	  	alert('error');
 	  });
 }
+
+/* jQuery */
+
+$(function () {
+    $(window).scroll(function (eventData) {
+        var pos = $(document).scrollTop();
+        if(pos > 0)
+        {
+            $("header").addClass("bottom-header");
+        }
+        else{
+            $("header").removeClass("bottom-header");
+        }
+    });
+});
