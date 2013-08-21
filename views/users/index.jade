@@ -3,8 +3,14 @@ h1 Users
 p 
 	a(href="/users/new") Create new profile
 
-ul
-	- for(var username in users){
-	li
-		a(href="/users/" + encodeURIComponent(username))= users[username] .name
+table.table.table-bordered.table-hover
+	thead
+		tr 
+			th Name
+			th User Name
+	- for(var user in users) {
+		tr
+			td= users[user] .name
+			td 
+				a(href="/users/" + encodeURIComponent(user))= users[user] .username
 	- };
