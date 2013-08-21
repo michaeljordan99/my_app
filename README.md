@@ -1,1 +1,1 @@
-<a href="http://glacial-shore-9366.herokuapp.com/">Node.js Demo</a>
+<a href="http://glacial-shore-9366.herokuapp.com/" target="_blank">Node.js Demo</a>
