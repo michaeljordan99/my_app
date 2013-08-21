@@ -110,3 +110,22 @@ footer {
     padding-bottom: 14px;
     text-align: center;
 }
+
+table th {
+  background-color: #C2C3C4;
+  color: white;
+}
+
+#top {
+  background: none repeat scroll 0 0 black;
+  padding: 8px;
+  opacity: 0.2;
+  bottom: 25px;
+  position: fixed;
+  right: 15px;
+  z-index: 1;
+}
+
+.hidden{
+  visibility: hidden;
+}

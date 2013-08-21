@@ -22,8 +22,11 @@ function UserRestCtrl($scope, $http) {
 /* jQuery */
 
 $(function () {
+
     $(window).scroll(function (eventData) {
+
         var pos = $(document).scrollTop();
+        
         if(pos > 0)
         {
             $("header").addClass("bottom-header");
@@ -31,5 +34,17 @@ $(function () {
         else{
             $("header").removeClass("bottom-header");
         }
+
+        if(pos > 50)
+        {
+            $("#top").removeClass("hidden");
+        }
+        else{
+            $("#top").addClass("hidden");
+        }
+    });
+
+    $("#top").on("click", function(){
+        $('html, body').animate({scrollTop:0}, 'fast');
     });
 });
