@@ -25,7 +25,9 @@ html(ng-app)
 						input#search(name="search").input-medium
 						a(href='#')
 							|&nbsp;&nbsp;
-							i.icon-search	
+							i.icon-search
+					div#login!= partial('session/user')
+
 			div#contentWrapper
 				div#leftContent 
 					"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 

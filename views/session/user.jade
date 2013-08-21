@@ -1,18 +1,13 @@
 - if (session.user) {
-
-	p
+	form(method="POST", action="/session")
 		span Hello&nbsp;
 		span= session.user.name
-		span !
-	p
-
-		form(method="POST", action="/session")
-			input(type="hidden", name="_method", value="DELETE")
-			input(type="submit", value="Log out")
+		span !&nbsp;&nbsp;
+		input(type="hidden", name="_method", value="DELETE")
+		input.btn-primary.btn-mini(type="submit", value="Log out")
 
 - } else {
-
-	p
+	
 		a(href="/session/new") Login
 		span &nbsp;or&nbsp;
 		a(href="/users/new") Register
