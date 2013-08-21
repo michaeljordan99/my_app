@@ -14,17 +14,17 @@ module.exports = function(app) {
 		});
 
 	app.get('/session/new', function(req, res) {
-		res.render('session/new', {title: "New Session"});
+		res.render('session/new', {title: "Login"});
 	});
 
 	app.post('/session', function(req, res) {
-		//debugger;
+		debugger;
 		if (users[req.body.username] &&
 			users[req.body.username].password === req.body.password) {
 			req.session.user = users[req.body.username];
 			res.redirect('/users');
 		} else {
-			res.redirect('/session/new')
+			res.render('session/new', {title: "Login", message: "In-valid Login."});
 		}
 	});
 

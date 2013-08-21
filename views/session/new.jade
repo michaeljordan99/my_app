@@ -1,4 +1,4 @@
-h1 Log in
+h1 #{title} 
 
 form(method="POST", action="/session")
 
@@ -12,3 +12,9 @@ form(method="POST", action="/session")
 		
 	p
 		input(type="submit", value="Log in");
+
+	-if (message != null)
+		br
+		p
+			div.alert.alert-danger #{message}
+
