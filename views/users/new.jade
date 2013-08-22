@@ -3,15 +3,15 @@ h3 New User
 form(method="POST", action="/users")
 	p
 		label(for="username") Username<br />
-		input#username(name="username")
+		input#username(name="username",type="text")
 	p
 		label(for="name") Name<br />
-		input#name(name="name")
+		input#name(name="name",type="text")
 	p
 		label(for="password") Password<br />
 		input#password(type="password", name="password")
 	p
 		label(for="bio") Bio<br/>
-		textarea#bio(name="bio")
+		textarea#bio(name="bio",type="text")
 	p
 		input(type="submit", value="Create")

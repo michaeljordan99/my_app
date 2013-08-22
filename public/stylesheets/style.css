@@ -10,6 +10,7 @@ a:hover {
 #container {
   min-height:100%;
   position:relative;
+  align: center;
 }
 
 header {
@@ -24,7 +25,16 @@ header {
   font-weight: bold;
 }
 
-#headerInner {
+#headerWrapper {
+  margin: 0 0 0 130px;
+  width: 75%;
+}
+
+#headerInnerLeft {
+  float: left;
+}
+
+#headerInnerRight {
   float: right;
   margin: 0 20px 0 0;
 }
@@ -38,8 +48,8 @@ header {
 }
 
 footer {
-  position:absolute;
-  bottom:0;
+  /*position:absolute;
+  bottom:0;*/
   width:100%;
   height:120px;   
   background: none repeat scroll 0 0 #F0F0F0;
@@ -65,13 +75,14 @@ footer {
 }
 
 #contentWrapper {
-  margin-top: 50px;
+  margin: 50px 0 0 100px;
   padding-left: 10px;
-  height: 1250px;
+  height: 1450px;
+  width: 90%;
   color: #7D7E80;
 }
 
-#middleContent, .left-sub-content, .right-sub-content{
+.left-sub-content, .middle-sub-content, .right-sub-content{
   padding: 25px;
   margin: 25px;
 }
@@ -88,12 +99,11 @@ footer {
   width: 15%;
 }
 
-.left-sub-content, .right-sub-content {
+.left-sub-content, .middle-sub-content, .right-sub-content {
   border: 1px solid #CCCDCF;
 }
 
 #middleContent {
-  border: 1px solid #CCCDCF;
   width: 50%;
   min-height: 750px;
 }

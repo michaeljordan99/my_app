@@ -47,4 +47,6 @@ $(function () {
     $("#top").on("click", function(){
         $('html, body').animate({scrollTop:0}, 'fast');
     });
+
+    $(".popover-button").popover({ html : true });
 });
