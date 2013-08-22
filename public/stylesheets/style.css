@@ -77,7 +77,7 @@ footer {
 #contentWrapper {
   margin: 50px 0 0 100px;
   padding-left: 10px;
-  height: 1450px;
+  min-height: 1450px;
   width: 90%;
   color: #7D7E80;
 }
