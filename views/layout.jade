@@ -13,14 +13,14 @@ html(ng-app)
 		div#container
 			header
 				div#headerWrapper
-					div#headerInnerleft
-					[	Header Icon]	
+					strong
+						[Header Icon]	
 					div#headerInnerRight
 						span.nav-button.separator
 							a(href='/')
 								i.icon-home
 						span.nav-button.separator	
-							popoverContent = "<i>Vivamus sagittis lacus vel augue laoreet rutrum faucibus.</i>"	
+							popoverContent = "<a href='#' onclick='hidePopover()'>Manage Account</a><br/><a href='#' onclick='hidePopover()'>Settings</a>"	
 							a.popover-button(href='#', title='',data-content=popoverContent,data-placement='bottom', data-toggle='popover')
 								i.icon-cog
 						span.nav-button

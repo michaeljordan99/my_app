@@ -50,3 +50,8 @@ $(function () {
 
     $(".popover-button").popover({ html : true });
 });
+
+function hidePopover() {
+    $('.popover-button').popover('hide');
+    return false;
+}
