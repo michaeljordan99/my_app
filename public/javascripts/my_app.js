@@ -48,10 +48,25 @@ $(function () {
         $('html, body').animate({scrollTop:0}, 'fast');
     });
 
-    $(".popover-button").popover({ html : true });
+    var popover1Content = "<div id='popover1Content'>"
+                        + "<h4>Account</h4>"
+                        + "<div id='popoverInnerContent'>"
+                        + "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor "
+                        + "incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud "
+                        + "exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure "
+                        + "</div>"
+                        + "<div id='popoverFooter'>"
+                        + "<button onclick='hidePopover(&quot;popover1&quot;);'' class='btn btn-primary'>Close</button>"
+                        + "</div>"
+                        + "</div>";
+
+    $('#popover1').popover({
+       html: true,
+       content: function(ele) { return popover1Content; }
+    });
 });
 
-function hidePopover() {
-    $('.popover-button').popover('hide');
+function hidePopover(control) {
+    $("#" + control).popover('hide');
     return false;
 }

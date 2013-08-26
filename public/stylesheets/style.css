@@ -140,3 +140,17 @@ table th {
 .hidden{
   visibility: hidden;
 }
+
+/* Popovers */
+#popoverInnerContent {
+  font-size: x-small;
+  color: gray;
+  padding: 10px 0 10px 0;
+  margin: 0 0 10px 0;
+  border-bottom: 1px solid #ACACAD;
+}
+
+#popoverFooter {
+  width: 100%;
+  text-align: right;
+}
