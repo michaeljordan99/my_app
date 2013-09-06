@@ -82,6 +82,13 @@ footer {
   margin: 25px;
 }
 
+.right-sub-content {
+  position: fixed;
+  top: 50px;
+  left: 1100px;
+  width: 75px;
+}
+
 #leftContent, #middleContent, #rightContent{
   float: left;
 }

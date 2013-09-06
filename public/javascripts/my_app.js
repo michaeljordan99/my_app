@@ -49,6 +49,7 @@ $(function () {
     });
 
     var popover1Content = "<div id='popover1Content'>"
+                        + "<a class='close' onclick='hidePopover(&quot;popover1&quot;);''>×</a>"
                         + "<h4>Account</h4>"
                         + "<div id='popoverInnerContent'>"
                         + "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor "

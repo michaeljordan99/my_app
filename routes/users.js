@@ -10,6 +10,7 @@ var restrictUserToSelf = require('./middleware/restrict_user_to_self');
 module.exports = function(app) {
 
 	app.get('/users', function(req, res){
+		debugger;
 		res.render('users/index', { title: 'Users', users: users})
 	});
 
