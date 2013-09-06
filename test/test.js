@@ -29,3 +29,17 @@ describe('get_user', function(){
 		assert.equal(user.lastName, "Smith");
 	})
 })
+
+describe('get_user', function(){
+	it('loadUser', function(){
+		var req = {
+			"params": {
+				"name":"frank"
+			}
+		};
+		var res = {};
+		var next = function(err) {console.log('In Next!')}
+		var user = get_user.loadUser(req, res, next);
+		assert.equal(user.name, "Frank Sinatra");
+	})
+})

@@ -10,5 +10,22 @@ var getLast = function() {
 	return users[users.length - 1];
 };
 
+var loadUser = function(req, res, next) {
+
+	var users = require('../../data/users');
+
+	var user = users[req.params.name];
+	
+	if(user)
+	{
+		return user;
+	}
+	else
+	{
+		next();
+	}
+};
+
 module.exports.getById = getById;
 module.exports.getLast = getLast;
+module.exports.loadUser = loadUser;
